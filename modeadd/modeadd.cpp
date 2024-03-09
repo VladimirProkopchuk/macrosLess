@@ -1,19 +1,16 @@
 ﻿#include "Add.h"
-#define MODE 1
-
+#define MODE 
 
 int main()
 {
     setlocale(LC_ALL, "rus");
-
 #ifdef MODE
-    cout << "Работаю в боевом режиме." << endl;
-#endif
 #ifndef MODE 
 #error "Опредилите MODE"
 #endif
 
 #if MODE == 1
+    cout << "Работаю в боевом режиме." << endl;
     float number1 = 0, number2 = 0;
     cout << "Введите первое число: ";
     cin >> number1;
@@ -25,5 +22,5 @@ int main()
 #else
     cout << "Неизвестный режим.Завершение работы." << endl;
 #endif
-
+#endif
 }
