@@ -1,13 +1,20 @@
-﻿#include "Add.h"
-#define MODE 
+﻿#include <iostream>
+#define MODE 1
+//#undef MODE
+#ifndef MODE 
+#error "Опредилите MODE"
+#endif
 
+#if MODE == 1
+#include "Add.h"
+#endif
+
+using namespace std;
 int main()
 {
     setlocale(LC_ALL, "rus");
 #ifdef MODE
-#ifndef MODE 
-#error "Опредилите MODE"
-#endif
+
 
 #if MODE == 1
     cout << "Работаю в боевом режиме." << endl;
